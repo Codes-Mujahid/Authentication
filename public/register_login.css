@@ -1,0 +1,185 @@
+/* RESET without * */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /* Body styles without using body selector */
+html {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #000;
+  transition: background 0.4s ease, color 0.4s ease;
+  height: 100%;
+}
+main {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} /* Form Container */
+.form-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+} /* ================= INPUTS ================= */
+.input-group {
+  position: relative;
+  margin: 20px 0;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.input-group input:focus {
+  border-color: #000;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #555;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.input-group input:focus,
+.input-group input:valid {
+  border-color: #000;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #000;
+  background: #fff;
+  padding: 0 4px;
+} /* ================= BUTTONS ================= */
+.btn-register,
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #000, #444);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-register:hover,
+.btn-login:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+} /* ================= DIVIDER ================= */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+  position: relative;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+} /* ================= SOCIAL LOGIN ================= */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.google-btn,
+.facebook-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.3s;
+}
+.facebook-btn i {
+  color: #1877f2;
+  font-size: 20px;
+}
+a.google-btn {
+  text-decoration: none;
+  color: black;
+}
+.google-btn:hover,
+.facebook-btn:hover {
+  background: #f9f9f9;
+  transform: scale(1.02);
+} /* ================= LINKS ================= */
+.login-option,
+.register-option {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.login-option a,
+.register-option a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.login-option a:hover,
+.register-option a:hover {
+  text-decoration: underline;
+} /* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} /* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+} /* ================= flash css ================= */
+.flash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background: #fff3cd;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <link rel="stylesheet" href="register_login.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <%- include('layouts/header') %> <%- include('layouts/flash') %>
+    <main>
+      <div class="form-container">
+        <h2 class="form-title">Login</h2>
+
+        <form class="login-form" action="/login" method="POST">
+          <div class="input-group">
+            <input type="text" id="username" name="username" required />
+            <label for="username">Username or Email</label>
+          </div>
+
+          <div class="input-group">
+            <input type="password" id="password" name="password" required />
+            <label for="password">Password</label>
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="divider">or</div>
+
+        <div class="social-login">
+          <button class="google-btn">
+            <img
+              src="https://auth-cdn.oaistatic.com/assets/google-logo-NePEveMl.svg"
+              alt=""
+            />
+            Sign up with Google
+          </button>
+          <button class="facebook-btn">
+            <i class="fab fa-facebook"></i> Sign up with Facebook
+          </button>
+        </div>
+
+        <p class="register-option">
+          Don’t have an account? <a href="/register">Register</a>
+        </p>
+      </div>
+    </main>
+    <%- include('layouts/footer') %>
+  </body>
+</html>
