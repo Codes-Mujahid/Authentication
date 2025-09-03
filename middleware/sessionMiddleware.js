@@ -12,6 +12,6 @@ export const sessionMiddleware= session({
   store: MongoStore.create({
     mongoUrl: process.env.mongoUrl,
     collectionName: 'sessions'
-  })
-//   cookie: { secure: true }
+  }),
+  cookie: { secure: true }
 });
